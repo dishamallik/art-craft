@@ -10,6 +10,7 @@ import CraftList from "./components/CraftList";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import PrivateRoute from "./components/PrivateRoute";
+import Error from "./components/Error";
 
 
   const router = createBrowserRouter([
@@ -31,7 +32,7 @@ import PrivateRoute from "./components/PrivateRoute";
         },
         {
             path: "/List",
-            element: <PrivateRoute><AddCraftItem></AddCraftItem></PrivateRoute>
+            element: <PrivateRoute><CraftList></CraftList></PrivateRoute>
         },
         {
             path: '/login',
@@ -41,10 +42,16 @@ import PrivateRoute from "./components/PrivateRoute";
             path: "/register",
             element: <Register></Register>
         },
-        
+      
 
-      ]
+      ],
+      
+      
     },
+    {
+        path: '*',
+        element: <Error></Error>
+       }
   ]);
 
   export default router;
