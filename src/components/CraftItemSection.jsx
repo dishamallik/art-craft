@@ -2,7 +2,7 @@
 
 const CraftItemSection = () => {
     return (
-        <div>
+        <div className="">
             Craft items section
         </div>
     );
