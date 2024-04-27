@@ -39,6 +39,7 @@ const navLinks = <>
     </ul>
   </div>
   <div className="navbar-end ">
+  <input type="checkbox" className="toggle toggle-md" checked />
     { user?
    <div className="dropdown dropdown-end">
    <div className="flex">
@@ -69,6 +70,7 @@ const navLinks = <>
       </div>
 }
   </div>
+
 </div>
 </div>
         </div>
