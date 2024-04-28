@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2'
 import useAuth from "../hook/useAuth";
 
 
@@ -28,6 +29,15 @@ fetch('http://localhost:5000/art' ,{
 .then(res=> res.json())
 .then(data => {
     console.log(data);
+    if(data.insertedId){
+        Swal.fire({
+            title: 'success!!',
+            text: 'User Added Successfully',
+            icon: 'success',
+            confirmButtonText: 'Cool'
+          })
+    
+    }
 })
 
 
