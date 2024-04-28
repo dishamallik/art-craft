@@ -2,6 +2,9 @@ import {  Link, NavLink } from "react-router-dom";
 import useAuth from "../hook/useAuth";
 
 
+
+
+
 const Navbar = () => {
     const  {logout, user} = useAuth()
 const navLinks = <>
@@ -39,7 +42,8 @@ const navLinks = <>
     </ul>
   </div>
   <div className="navbar-end ">
-  <input type="checkbox" className="toggle toggle-md" checked />
+  
+    
     { user?
    <div className="dropdown dropdown-end">
    <div className="flex">
