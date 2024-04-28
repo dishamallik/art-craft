@@ -1,7 +1,9 @@
+
 import ArtCraftSection from "./ArtCraftSection";
 import ArtGallery from "./ArtGallery";
 import Banner from "./Banner";
-import CraftItemSection from "./CraftItemSection";
+import CardSection from "./CardSection";
+
 import Review from "./Review";
 
 
@@ -9,13 +11,17 @@ import Review from "./Review";
 
 
 const Home = () => {
+
+    // const arts = useLoaderData();
+
     return (
         
         <div className="" >
             
             <Banner></Banner>
             <div className="container mx-auto ">
-            <CraftItemSection></CraftItemSection>
+            
+          <CardSection></CardSection>
             <ArtCraftSection></ArtCraftSection>
             <Review></Review>
             <ArtGallery></ArtGallery>

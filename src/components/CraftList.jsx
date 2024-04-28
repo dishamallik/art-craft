@@ -3,7 +3,7 @@
 const CraftList = () => {
     return (
         <div>
-            this is art and craft list
+            this is craft list
         </div>
     );
 };

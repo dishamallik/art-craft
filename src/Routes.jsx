@@ -12,6 +12,10 @@ import Register from "./components/Register";
 import PrivateRoute from "./components/PrivateRoute";
 import Error from "./components/Error";
 
+import CraftDetails from "./components/CraftDetails";
+
+
+
 
   const router = createBrowserRouter([
     {
@@ -20,7 +24,9 @@ import Error from "./components/Error";
       children:[
         {
             path: "/",
-            element:<Home></Home>
+            element:<Home></Home>,
+            
+            
         },
         {
             path: "/craft",
@@ -42,6 +48,12 @@ import Error from "./components/Error";
             path: "/register",
             element: <Register></Register>
         },
+       
+        {
+            path:'/art/:id',
+           element: <CraftDetails></CraftDetails>,
+            loader: ({params}) => fetch(`http://localhost:5000/art/${params.id}`)
+        }
       
 
       ],

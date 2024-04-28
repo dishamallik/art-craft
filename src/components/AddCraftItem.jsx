@@ -149,11 +149,7 @@ fetch('http://localhost:5000/art' ,{
                         </label>
                     </div>
                 </div>
-                <div className="md:flex gap-5  mb-8">
-                    <div className="border-solid border-2  bg-green-300 rounded-lg">name: {user?.displayName || "not Found"} </div>
-                    <div className="border-solid border-2  bg-green-300 rounded-lg">email: {user?.email || "not found"}</div>
-
-                </div>
+                
 
              
 
