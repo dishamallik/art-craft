@@ -9,7 +9,7 @@ import FirebaseProvider from "./FirebaseProvider/FirebaseProvider";
 
 const Root = () => {
     return (
-            <div className="">
+            <div className="" >
           <Navbar></Navbar>
           
           <FirebaseProvider></FirebaseProvider>

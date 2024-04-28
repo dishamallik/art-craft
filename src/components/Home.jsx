@@ -11,7 +11,7 @@ import Review from "./Review";
 const Home = () => {
     return (
         
-        <div className="">
+        <div className="" >
             
             <Banner></Banner>
             <div className="container mx-auto ">

@@ -68,31 +68,7 @@ const AddCraftItem = () => {
                         </label>
                     </div>
                 </div>
-              
-                
-                <div className="md:flex mb-8">
-                    <div className="form-control md:w-1/2">
-                        <label className="label">
-                            <span className="label-text">User Email:</span>
-                        </label>
-                        <label className="input-group">
-                            <input type="text" 
-                            
-                            name="User_Email" placeholder="User Email" className="input input-bordered w-full" />
-                        </label>
-                    </div>
-
-                    <div className="form-control md:w-1/2 ml-4">
-                        <label className="label">
-                            <span className="label-text">User Name:</span>
-                        </label>
-                        <label className="input-group">
-                            <input type="text"
-                            
-                            name="User_Name" placeholder="User Name" className="input input-bordered w-full" />
-                        </label>
-                    </div>
-                </div>
+            
                 <div className="md:flex gap-5  mb-8">
                 {/* Customization */}
                 <div className="mb-8">
@@ -130,6 +106,11 @@ const AddCraftItem = () => {
                             <input type="text" name="photo" placeholder="Photo URL" className="input input-bordered w-full" />
                         </label>
                     </div>
+                </div>
+                <div className="md:flex gap-5  mb-8">
+                    <div className="border-solid border-2  bg-green-300 rounded-lg">name:  </div>
+                    <div className="border-solid border-2  bg-green-300 rounded-lg">email: </div>
+
                 </div>
 
              
