@@ -1,12 +1,32 @@
+import useAuth from "../hook/useAuth";
 
 
 const AddCraftItem = () => {
+    const handleAddCoffee = e => {
+        e.preventDefault();
+        const form = e.target;
+        const item_name = form.item_name.value;
+        const subcategory_Name = form.subcategory_Name.value;
+        const short_description = form.short_description.value;
+        const price = form.price.value;
+        const rating = form.rating.value;
+        const processing_time = form.processing_time.value;
+        const photo = form.photo.value;
+        const customization = form.customization.value;
+        const stock_status = form.stock_status.value;
+
+       const newCraft = {item_name, subcategory_Name, short_description, price, rating, processing_time, photo, customization, stock_status }
+        console.log(newCraft);
+
+
+    }
+    const  { user} = useAuth()
     return (
         <div className="container mx-auto ">
             <div className="mt-10 mb-10">
              <div className="bg-[#e0ecd7] p-24">
             <h2 className="text-3xl font-extrabold">Add Craft</h2>
-            <form >
+            <form onSubmit={handleAddCoffee}>
                 
                 <div className="md:flex mb-8">
                     <div className="form-control md:w-1/2">
@@ -108,8 +128,8 @@ const AddCraftItem = () => {
                     </div>
                 </div>
                 <div className="md:flex gap-5  mb-8">
-                    <div className="border-solid border-2  bg-green-300 rounded-lg">name:  </div>
-                    <div className="border-solid border-2  bg-green-300 rounded-lg">email: </div>
+                    <div className="border-solid border-2  bg-green-300 rounded-lg">name: {user?.displayName || "not Found"} </div>
+                    <div className="border-solid border-2  bg-green-300 rounded-lg">email: {user?.email || "not found"}</div>
 
                 </div>
 
