@@ -18,6 +18,32 @@ const AddCraftItem = () => {
        const newCraft = {item_name, subcategory_Name, short_description, price, rating, processing_time, photo, customization, stock_status }
         console.log(newCraft);
 
+// send data
+fetch('http://localhost:5000/craft' ,{
+    method: 'POST',
+    headers: {
+        'content-type': 'application/json'
+    },
+    body: JSON.stringify(newCraft)
+   }) 
+   .then(res => res.json())
+   .then(data => {
+    console.log(data);
+
+   })
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     }
     const  { user} = useAuth()
