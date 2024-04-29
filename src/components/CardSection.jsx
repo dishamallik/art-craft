@@ -8,6 +8,7 @@ import Art from "./Art";
 const CardSection = () => {
 
     const [arts, setArts] = useState([]);
+  
 
     useEffect(() => {
         fetch('http://localhost:5000/art')

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import useAuth from "../hook/useAuth";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 const CraftList = () => {
     const { user } = useAuth() || {};
@@ -86,7 +87,9 @@ const handleDelete = _id => {
                             <p className="text-gray-600 mb-2">Customization: {item.customization}</p>
                             <p className="text-gray-600 mb-2">Stock Status: {item.stock_status}</p>
                             <div className="flex justify-center">
-                                <button className="mr-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Update</button>
+                               <Link to={`/update/${item._id}`}>
+                               <button className="mr-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Update</button>
+                               </Link>
                                 <button 
                               onClick={() => handleDelete(item._id)}
                                 className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600">Delete</button>

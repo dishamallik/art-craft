@@ -14,7 +14,7 @@ const CraftDetails = () => {
     </div>
  
     <div className="p-6">
-        <h2 className="text-xl font-semibold mb-2">item_name</h2>
+        <h2 className="text-xl font-semibold mb-2">{arts.item_name}</h2>
         <p className="text-gray-600 mb-4">{arts.subcategory_Name}</p>
         <p className="text-gray-700 mb-4">
             {arts.short_description}</p>

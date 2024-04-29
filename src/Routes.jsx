@@ -13,6 +13,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import Error from "./components/Error";
 
 import CraftDetails from "./components/CraftDetails";
+import Update from "./components/Update";
 
 
 
@@ -30,7 +31,10 @@ import CraftDetails from "./components/CraftDetails";
         },
         {
             path: "/craft",
-            element: <AllArtItem></AllArtItem>
+            element: <AllArtItem></AllArtItem>,
+            loader: () => fetch('http://localhost:5000/art')
+
+            
         },
         {
             path: "/Add",
@@ -54,6 +58,12 @@ import CraftDetails from "./components/CraftDetails";
             path:'/art/:id',
            element: <PrivateRoute><CraftDetails></CraftDetails></PrivateRoute>,
             loader: ({params}) => fetch(`http://localhost:5000/art/${params.id}`)
+        }, 
+        {
+          path:"/update/:id",
+          element: <Update></Update>,
+          loader: ({params}) => fetch(`http://localhost:5000/art/${params.id}`)
+
         }
       
 
