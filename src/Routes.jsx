@@ -38,7 +38,8 @@ import CraftDetails from "./components/CraftDetails";
         },
         {
             path: "/List",
-            element: <PrivateRoute><CraftList></CraftList></PrivateRoute>
+            element: <PrivateRoute><CraftList></CraftList></PrivateRoute>,
+           
         },
         {
             path: '/login',
@@ -51,7 +52,7 @@ import CraftDetails from "./components/CraftDetails";
        
         {
             path:'/art/:id',
-           element: <CraftDetails></CraftDetails>,
+           element: <PrivateRoute><CraftDetails></CraftDetails></PrivateRoute>,
             loader: ({params}) => fetch(`http://localhost:5000/art/${params.id}`)
         }
       
