@@ -45,7 +45,7 @@ const Update = () => {
         const updateCraft = { user_name, user_Email, item_name, subcategory_Name, short_description, price, rating, processing_time, photo, customization, stock_status };
 
         try {
-            const response = await fetch(`http://localhost:5000/art/${_id}`, {
+            const response = await fetch(`https://art-craft-server-ruby.vercel.app/art/${_id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
@@ -55,15 +55,15 @@ const Update = () => {
 
             const data = await response.json();
 
-            if (data.modifiedCount > 0) {
-                Swal.fire({
-                    title: 'Success!!',
-                    text: 'Item updated Successfully',
-                    icon: 'success',
-                    confirmButtonText: 'Cool'
-                });
-            }
-            
+           if (data.modifiedCount > 0) {
+    Swal.fire({
+        title: 'Success!!',
+        text: 'Item updated Successfully',
+        icon: 'success',
+        confirmButtonText: 'Cool'
+    });
+}
+
         } catch (error) {
             console.error('Error:', error);
             Swal.fire({

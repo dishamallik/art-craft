@@ -32,7 +32,7 @@ import Update from "./components/Update";
         {
             path: "/craft",
             element: <AllArtItem></AllArtItem>,
-            loader: () => fetch('http://localhost:5000/art')
+            loader: () => fetch('https://art-craft-server-ruby.vercel.app/art')
 
             
         },
@@ -57,12 +57,12 @@ import Update from "./components/Update";
         {
             path:'/art/:id',
            element: <PrivateRoute><CraftDetails></CraftDetails></PrivateRoute>,
-            loader: ({params}) => fetch(`http://localhost:5000/art/${params.id}`)
+            loader: ({params}) => fetch(`https://art-craft-server-ruby.vercel.app/art/${params.id}`)
         }, 
         {
           path:"/update/:id",
           element: <Update></Update>,
-          loader: ({params}) => fetch(`http://localhost:5000/art/${params.id}`)
+          loader: ({params}) => fetch(`https://art-craft-server-ruby.vercel.app/art/${params.id}`)
 
         }
       

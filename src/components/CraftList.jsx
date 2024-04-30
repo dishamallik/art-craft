@@ -9,7 +9,7 @@ const CraftList = () => {
 
     useEffect(() => {
         if (user?.email) {
-            fetch(`http://localhost:5000/myArt/${user.email}`)
+            fetch(`https://art-craft-server-ruby.vercel.app/myArt/${user.email}`)
                 .then((res) => res.json())
                 .then((data) => {
                     setItems(data);
@@ -38,7 +38,7 @@ const handleDelete = _id => {
       }).then((result) => {
         if (result.isConfirmed) {
         
-        fetch(`http://localhost:5000/art/${_id}`, {
+        fetch(`https://art-craft-server-ruby.vercel.app/art/${_id}`, {
             method: 'DELETE'
         })
         .then (res => res.json())

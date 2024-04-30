@@ -42,7 +42,7 @@ const AddCraftItem = () => {
         const newCraft = { user_name, user_Email, item_name, subcategory_Name, short_description, price, rating, processing_time, photo, customization, stock_status };
 
         try {
-            const response = await fetch('http://localhost:5000/art', {
+            const response = await fetch('art-craft-server-ruby.vercel.app/art', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

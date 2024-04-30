@@ -11,7 +11,7 @@ const CardSection = () => {
   
 
     useEffect(() => {
-        fetch('http://localhost:5000/art')
+        fetch('https://art-craft-server-ruby.vercel.app/art')
             .then(res => res.json())
             .then(data => setArts(data));
     }, []);
@@ -20,10 +20,16 @@ const CardSection = () => {
 
     return (
         
-        <div>
+        <div className="">
+            <div className="text-4xl">
+                <h1>Craft items section</h1>
+
+
+              </div>
+
            
             <div>
-                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-20">
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-20 ">
        {
             arts.map(art =>  <Art key={art._id} 
                 art={art}
