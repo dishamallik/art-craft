@@ -3,12 +3,12 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAfE4Sok9zD4HBk1Nh65A2GgSUUG_VRSTE",
-  authDomain: "drawing-painting-1c63e.firebaseapp.com",
-  projectId: "drawing-painting-1c63e",
-  storageBucket: "drawing-painting-1c63e.appspot.com",
-  messagingSenderId: "895195583388",
-  appId: "1:895195583388:web:88a591c566dd209c7dae59"
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID,
 };
 
 // Initialize Firebase
