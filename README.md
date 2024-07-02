@@ -1,5 +1,5 @@
-artVibes - README File
-Live Site URL: artVibes
+artVibes 
+Live Site URL: https://art-craft-client.web.app
 
 Project Overview
 Concept: artVibes is an online platform designed to provide a comprehensive range of painting and drawing supplies for artists of all skill levels.
